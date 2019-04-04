@@ -1,9 +1,11 @@
-
-
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'springsecurity.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'springsecurity.UserRole'
 grails.plugin.springsecurity.authority.className = 'springsecurity.Role'
+
+// For logout functionality
+grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.logout.afterLogoutUrl = "/"
 
 grails.plugin.springsecurity.securityConfigType = 'Annotation'
 // Extra rules that cannot be mapped using annotations
