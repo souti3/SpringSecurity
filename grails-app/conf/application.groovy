@@ -4,6 +4,9 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'springsecurity.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'springsecurity.UserRole'
 grails.plugin.springsecurity.authority.className = 'springsecurity.Role'
+
+grails.plugin.springsecurity.securityConfigType = 'Annotation'
+// Extra rules that cannot be mapped using annotations
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
@@ -16,13 +19,3 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']]
 ]
-
-grails.plugin.springsecurity.filterChain.chainMap = [
-	[pattern: '/assets/**',      filters: 'none'],
-	[pattern: '/**/js/**',       filters: 'none'],
-	[pattern: '/**/css/**',      filters: 'none'],
-	[pattern: '/**/images/**',   filters: 'none'],
-	[pattern: '/**/favicon.ico', filters: 'none'],
-	[pattern: '/**',             filters: 'JOINED_FILTERS']
-]
-
