@@ -12,7 +12,7 @@ class HomeController {
     def index() {
         // respond handles content negotation
         render "<output>Hello '${loggedUsername()}'!</output>"
-        // Following needs "home/index.gson" and "compile 'org.grails.plugins:views-json:1.2.8'"
+        // Following needs "home/index.gson" and "compile 'org.grails.plugins:views-json'"
         // [name: loggedUsername()]
     }
 
