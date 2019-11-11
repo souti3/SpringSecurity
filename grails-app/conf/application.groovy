@@ -5,6 +5,8 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'springsecurity.Us
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'springsecurity.UserRole'
 grails.plugin.springsecurity.authority.className = 'springsecurity.Role'
 grails.plugin.springsecurity.securityConfigType = 'Annotation'
+grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
@@ -15,6 +17,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/js/**',       access: ['permitAll']],
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
-	[pattern: '/**/favicon.ico', access: ['permitAll']]
+	[pattern: '/**/favicon.ico', access: ['permitAll']],
+	[pattern: '/h2-console/**',	 access: ['permitAll']]
 ]
 

@@ -9,6 +9,9 @@ class BootStrap {
 
         User user = save(new User(username: 'user', password: 'user'))
         User admin = save(new User(username: 'admin', password: 'admin'))
+
+        UserRole.create(user, userRole, true)
+        UserRole.create(admin, adminRole, true)
     }
 
     static save(domainModel) {
